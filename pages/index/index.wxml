@@ -9,4 +9,5 @@
   <!-- 事件监听 -->
   <view>当前计数：{{ counter }}</view>
   <button bindtap="clickBtn" size="mini">+</button>
+  <button open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">获取授权</button>
 </view>

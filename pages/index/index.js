@@ -32,8 +32,13 @@ Page({
     // this.data.counter++
 
     // 使用这种方式渲染页面
+    console.log(app)
     this.setData({
       counter: this.data.counter+1
     })
+  },
+  handleGetUserInfo(event){
+    console.log(event)
+    app.globalData.userInfo = event.detail.userInfo
   }
 })
