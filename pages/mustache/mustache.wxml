@@ -1,0 +1,12 @@
+<button size="small" type="primary" bindtap="hanldeSwitchColor">切换颜色</button>
+<view class="test {{ isActive ? 'active' : '' }}">哈哈哈</view>
+<view>当前时间：{{ currentTime }}</view>
+
+<view>---------- 条件判断 ----------</view>
+<button size="small" type="primary" bindtap="hanldeSwitchShow">切换显示</button>
+<view wx:if="{{ isShow }}">哈哈哈</view>
+
+<view>---------- 遍历二维数组 ----------</view>
+<block wx:for="{{ nums }}" wx:for-item="innerNums">
+  <view wx:for="{{ innerNums }}">{{item}}</view>
+</block>

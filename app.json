@@ -1,5 +1,8 @@
 {
   "pages":[
+    "pages/include/include",
+    "pages/template/template",
+    "pages/mustache/mustache",
     "pages/index/index",
     "pages/logs/logs"
   ],

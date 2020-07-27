@@ -1,0 +1,9 @@
+<!--pages/include/include.wxml-->
+<text>pages/include/include.wxml</text>
+<include src="/wxml/header.wxml" />
+
+<view>
+content 内容
+</view>
+
+<include src="/wxml/footer.wxml" />
