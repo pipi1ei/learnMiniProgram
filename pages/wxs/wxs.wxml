@@ -1,0 +1,21 @@
+<!--pages/wxs/wxs.wxml-->
+<text>pages/wxs/wxs.wxml</text>
+
+
+<!-- <wxs module="info">
+  var message = "hello world";
+  var name = "pipilei"
+
+  var sum = function(num1, num2){
+    return num1 + num2;
+  }
+
+  module.exports = {
+    message: message,
+    name: name,
+    sum: sum
+  }
+</wxs> -->
+<wxs src="../../wxs/test.wxs" module="test"/>
+
+<view>{{ test.message }}</view>
