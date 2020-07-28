@@ -1,13 +1,47 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<view>
+  <text>hello world</text>
+  <button class="btn" type="primary">按钮</button>
+  <!-- 自定义组件基本使用 -->
+  <view class="separate">!-- 自定义组件基本使用 --</view>
+  <my-cpn />
+
+  <!-- 向组件传递数据/样式 -->
+  <view class="separate">!-- 向组件传递数据/样式 --</view>
+  <my-prop title="标题一" titleclass="red" />
+  <my-prop title="标题二" titleclass="blue" />
+  <my-prop titleclass="green" />
+
+  <!-- 组件向外传递事件 -->
+  <view class="separate">!-- 组件向外传递事件 --</view>
+  <view>{{ counter }}</view>
+  <my-event bind:handAdd="handAdd" />
+
+  <!-- 封装 tabbar 组件 -->
+  <view class="separate">!-- 封装 tabbar 组件 --</view>
+  <tab-bar titles="{{['流行', '新款', '精选', '我的']}}" bind:handTabItemClick="handTabItemClick"/>
+
+  <!-- 组件外调用组件内的方法 -->
+  <view class="separate">!-- 组件外调用组件内的方法 --</view>
+  <button size="mini" type="primary" bindtap="handlePageBtnClick">组件外的按钮</button>
+  <my-sel id="my-sel" />
+
+  <!-- 组件中使用单个插槽 -->
+  <view class="separate">-- 组件中使用单个插槽 --</view>
+  <slot-cpn>
+    <text>中间是一段文字</text>
+  </slot-cpn>
+  <view>------------------------------</view>
+  <slot-cpn>
+    <button size="mini" type="primary">中间是一个按钮</button>
+  </slot-cpn>
+
+  <!-- 组件中使用多个插槽 -->
+  <view class="separate">-- 组件中使用多个插槽 --</view>
+  <mul-slot>
+    <button slot="slot2">插入slot2的位置</button>
+    <text slot="slot1">插入slot1的位置</text>
+    <text slot="slot3">插入slot3的位置</text>
+  </mul-slot>
 </view>
+ 

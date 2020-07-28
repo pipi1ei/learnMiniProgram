@@ -1,0 +1,2 @@
+<view class="title titleclass">{{title}}</view>
+<view>我是my-prop组件内容</view>
